@@ -1,0 +1,10 @@
+<div class="button step_3" ng-click="backStep()"><img src="img/arrow_back.png"/>select data</div><span class="text">Here is the data that you have requested:</span>
+<table cellspacing="0">
+	<tr>
+		<th ng-repeat="item in arrayData" ng-if="item.checked" ng-click="sortColumn(item.name)">{{item.name}}</th>
+	</tr>
+	<tr ng-repeat="prop in data | orderBy:sortType:sortReverse">
+		<td ng-repeat="item in arrayData" ng-bind="cellName(prop, item.name)" ng-if="item.checked" ng-class="item.class"></td>
+	</tr>
+</table>
+

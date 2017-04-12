@@ -1,0 +1,12 @@
+<div class="step_2">
+	<p>Please select data that you want to display:</p>
+	<div class="checkWrap">
+		<label ng-repeat="item in arrayData">
+			<input type="checkbox" ng-model="item.checked" />
+			<span class="checkbox"></span>
+			<span class="title">{{item.name}}</span>
+		</label>
+	</div>
+	<p class="selectCheckbox"><span ng-click="selectAll()">Select All</span> | <span ng-click="clearAll()">Clear Selection</span></p>
+	<div class="button" ng-click="moveStep3()">submit</div>
+</div>
